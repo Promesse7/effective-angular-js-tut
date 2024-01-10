@@ -1,0 +1,16 @@
+*{
+   margin: 0px;
+   padding: 0;
+}
+body{
+    background-color: lightblue;
+    border-radius: 5px;
+    height: 99.5vh;
+    width: 99.5vw;
+
+}
+
+.contain{
+    display: block;
+    height: 60vh;
+}
