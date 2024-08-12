@@ -522,53 +522,46 @@ h6,
 /* customazing about us  */
 
 
-    .school-history {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-    }
+.timeline {
+    display: flex; /* Use flexbox for horizontal layout */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    padding: 20px 0; /* Padding around timeline */
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
 
-    .timeline {
-        position: relative;
-        padding: 20px 0;
-    }
+.timeline-item {
+    background: #fff; /* White background for timeline items */
+    border-radius: 10px; /* Rounded corners */
+    margin: 0 15px; /* Space between items */
+    padding: 20px; /* Padding inside items */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    flex: 0 0 auto; /* Prevent items from shrinking */
+    transition: transform 0.3s; /* Animation for hover effect */
+    position: relative; /* Positioning for pseudo-elements */
+}
 
-    .timeline::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 50px;
-        height: 100%;
-        width: 2px;
-        background: #FE5D37;
-    }
+.timeline-item:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
 
-    .timeline-item {
-        margin-bottom: 30px;
-        padding-left: 70px;
-        position: relative;
-    }
+.year {
+    font-size: 1.5rem; /* Year font size */
+    font-weight: bold; /* Bold font */
+    color: #007bff; /* Year color */
+    margin-bottom: 10px; /* Space below year */
+}
 
-    .timeline-item h3 {
-        font-size: 1.2em;
-        margin-bottom: 10px;
-        color: #FE5D37;
-    }
+.content ul {
+    margin-top: 10px; /* Space above the list */
+}
 
-    .timeline-item::before {
-        content: '';
-        position: absolute;
-        left: 40px;
-        top: 0;
-        width: 20px;
-        height: 20px;
-        background: #FE5D37;
-        border-radius: 50%;
-    }
+.highlight {
+    text-align: center; /* Center the highlight text */
+    font-size: 1.2rem; /* Highlight font size */
+    margin-top: 20px; /* Space above highlight text */
+    font-weight: bold; /* Bold highlight text */
+}
 
-    .timeline-item p, .timeline-item ul {
-        margin-left: 20px;
-    }
 
     .highlight {
         text-align: center;
@@ -621,3 +614,25 @@ h5 {
     background-color: #f9f9f9; /* Light background for curriculum section */
 }
 
+.facility-card {
+    transition: transform 0.3s, box-shadow 0.3s; /* Animation for hover effect */
+    position: relative; /* Positioning for pseudo-elements */
+}
+
+.facility-card:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.facility-icon {
+    font-size: 3rem; /* Larger icon size */
+    margin-bottom: 15px; /* Space below icon */
+    color: #007bff; /* Icon color */
+}
+
+/* Optional: Responsive adjustments */
+@media (max-width: 768px) {
+    .facility-icon {
+        font-size: 2.5rem; /* Adjust icon size for smaller screens */
+    }
+}
