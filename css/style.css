@@ -576,3 +576,20 @@ h6,
         color: #FE5D37;
         margin-top: 20px;
     }
+
+   .partner-item {
+    background: #f8f9fa; /* Light background for each partner item */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding around the content */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s; /* Animation for hover effect */
+    }
+
+.partner-item:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.partner-item img {
+    max-width: 100%; /* Responsive logo size */
+    height: auto; /* Maintain aspect ratio */
+}
