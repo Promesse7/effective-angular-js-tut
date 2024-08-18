@@ -528,7 +528,7 @@ h6,
 
 .timeline-title {
     font-size: 30px;
-    margin-bottom: 40px;
+    margin-bottom: 20px; /* Reduced margin for a tighter layout */
     color: #333;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -556,11 +556,12 @@ h6,
     position: relative;
     width: 20%; /* Adjust width based on the number of events */
     text-align: center;
+    margin: 0 10px; /* Add horizontal margin to space out the cards */
 }
 
 .timeline-point {
-    width: 16px;
-    height: 16px;
+    width: 12px;
+    height: 12px;
     background-color: #333;
     border-radius: 50%;
     position: absolute;
@@ -571,11 +572,11 @@ h6,
 
 .card {
     position: absolute;
-    top: -150px;
+    top: -120px; /* Reduce the top margin to bring the card closer to the timeline */
     left: 50%;
     transform: translateX(-50%);
-    width: 220px;
-    padding: 20px;
+    width: 240px; /* Slightly wider cards for better readability */
+    padding: 15px; /* Reduced padding for a more compact look */
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -584,12 +585,12 @@ h6,
 
 .card p {
     margin: 0;
-    font-size: 16px;
+    font-size: 14px;
     color: #555;
 }
 
 .card p strong {
-    font-size: 18px;
+    font-size: 16px;
     color: #333;
     display: block;
     margin-bottom: 8px;
