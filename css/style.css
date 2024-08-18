@@ -522,66 +522,80 @@ h6,
 /* customazing about us  */
 
 .timeline-container {
-    overflow-x: auto;
-    white-space: nowrap;
-    padding: 20px 0;
-    position: relative;
+    text-align: center;
+    padding: 40px;
+}
+
+.timeline-title {
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
 .timeline {
-    display: inline-flex;
+    display: flex;
     justify-content: space-between;
     position: relative;
     padding: 20px 0;
 }
 
-.timeline-item {
-    display: inline-block;
-    position: relative;
-    margin-right: 50px;
-}
-
-.pointing-card {
-    position: relative;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    transition: transform 0.3s ease;
-}
-
-.pointing-card:hover {
-    transform: scale(1.05);
-}
-
-.pointing-card::before {
+.timeline::before {
     content: '';
     position: absolute;
     top: 50%;
-    left: -15px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: black;
     transform: translateY(-50%);
-    border-width: 10px;
-    border-style: solid;
-    border-color: transparent transparent transparent #fff;
 }
 
-.timeline-item h3 {
-    margin-bottom: 10px;
-    font-size: 1.5rem;
+.timeline-event {
+    position: relative;
+    width: 20%; /* Adjust width based on the number of events */
+    text-align: center;
 }
 
-.timeline-item p {
-    margin-bottom: 10px;
+.timeline-point {
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.timeline-item ul {
-    padding-left: 20px;
-    list-style-type: disc;
+.tooltip {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.2s ease-in-out;
 }
 
-.timeline-item ul li {
-    margin-bottom: 5px;
+.timeline-event:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.year {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: gray;
+    margin-top: 10px;
 }
 
 
