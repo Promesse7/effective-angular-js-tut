@@ -526,76 +526,60 @@ h6,
     background-color: #f5f5f5;
 }
 
-.timeline-title {
-    font-size: 30px;
-    margin-bottom: 20px; /* Reduced margin for a tighter layout */
-    color: #333;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
-
+h1 {
+    text-align: center;
+}
 .timeline {
-    display: flex;
-    justify-content: space-between;
     position: relative;
     padding: 20px 0;
 }
-
-.timeline::before {
+.line {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background-color: #000;
+}
+.event {
+    position: relative;
+    margin-bottom: 50px;
+}
+.event-content {
+    position: relative;
+    width: 45%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.event:nth-child(odd) .event-content {
+    left: 55%;
+}
+.event:nth-child(even) .event-content {
+    left: 0;
+}
+.event:after {
     content: '';
     position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #ddd;
-    transform: translateY(-50%);
-}
-
-.timeline-event {
-    position: relative;
-    width: 20%; /* Adjust width based on the number of events */
-    text-align: center;
-    margin: 0 10px; /* Add horizontal margin to space out the cards */
-}
-
-.timeline-point {
-    width: 12px;
-    height: 12px;
-    background-color: #333;
+    top: 15px;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #000;
     border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.card {
-    position: absolute;
-    top: -120px; /* Reduce the top margin to bring the card closer to the timeline */
-    left: 50%;
     transform: translateX(-50%);
-    width: 240px; /* Slightly wider cards for better readability */
-    padding: 15px; /* Reduced padding for a more compact look */
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: left;
 }
-
-.card p {
-    margin: 0;
-    font-size: 14px;
-    color: #555;
+.year {
+    font-weight: bold;
+    margin-bottom: 5px;
 }
-
-.card p strong {
-    font-size: 16px;
-    color: #333;
-    display: block;
-    margin-bottom: 8px;
-}
-
 
 .highlight {
     text-align: center; /* Center the highlight text */
