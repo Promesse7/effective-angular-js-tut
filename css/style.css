@@ -520,74 +520,115 @@ h6,
 
 
 /* customazing about us  */
-.timeline-container {
-    text-align: center;
-    padding: 50px;
-    background-color: #f5f5f5;
+/************************************TIMELINE CSS******************************/
+.timeliyini {
+	margin-top: 30px;
 }
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #f0f0f0;
+.main-timeline-section {
+	position: relative;
+	width: 100%;
+	margin: auto;
+	height: 300px;
 }
-h1 {
-    text-align: center;
+.main-timeline-section .timeline-start
+{
+	position: absolute;
+	background: #000000;
+	border-radius: 100px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 30px;
+	height: 30px;
 }
-.timeline {
-    position: relative;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 40px 0;
+.main-timeline-section .timeline-end{
+	position: absolute;
+	background: #000000;
+	border-bottom-left-radius: 50px;
+	top: 46%;
+	transform: rotateZ(45deg) !important;
+	width: 25px;
+	height: 25px;
+	transform: translateY(-80px);
 }
-.line {
-    position: absolute;
-    z-index: 1;
-    left: 0;
-    top: 50%;
-    width: 100%;
-    height: 2px;
-    background-color: #000;
+.main-timeline-section .timeline-end {
+	right: 0px;
 }
-.event {
-    position: relative;
-    width: 20%;
-    float: left;
+.main-timeline-section .conference-center-line {
+	position: absolute;
+	width: 100%;
+	height: 5px;
+	top: 50%;
+	transform: translateY(-50%);
+	background: #000000;
 }
-.event-content {
-    position: relative;
-    bottom: 60px;
-    padding: 10px;
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+.timeline-article {
+	width: 20%;
+	position: relative;
+	min-height: 300px;
+	float: right;
 }
-.event:nth-child(even) .event-content {
-    bottom: -60px;
+.timeline-article .content-date {
+	position: absolute;
+	top: 35%;
+	left: -30px;
+	font-size: 18px;
 }
-.event:after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    width: 10px;
-    height: 10px;
-    background-color: #000;
-    border-radius: 50%;
-    transform: translateX(-50%);
+.timeline-article .meta-date {
+	position: absolute;
+	top: 50%;
+	left: 0px;
+	transform: translateY(-50%);
+	width: 20px;
+	height: 20px;
+	border-radius: 100%;
+	background: #fff;
+	border: 1px solid #2d6cdf;
 }
-.year {
-    position: absolute;
-    bottom: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-weight: bold;
+.timeline-article .content-box {
+	box-shadow: 2px 2px 4px 0px #c1c1c1;
+	border: 1px solid #2d6cdf;
+	border-radius: 5px;
+	background-color: #fff;
+	width: 180px;
+	position: absolute;
+	top: 60%;
+	left: -80px;
+	padding: 10px;
 }
-.event:nth-child(even) .year {
-    bottom: auto;
-    top: -30px;
+.timeline-article-top .content-box:before {
+	content: " ";
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: -20px;
+	border: 10px solid transparent;
+	border-bottom-color: #2d6cdf;
 }
+.timeline-article-bottom .content-date {
+	top: 59%;
+}
+.timeline-article-bottom .content-box {
+	top: 0%;
+}
+.timeline-article-bottom .content-box:before {
+	content: " ";
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: -20px;
+	border: 10px solid transparent;
+	border-top-color: #2d6cdf;
+}
+.content-box span {
+	color: #000000;
+}
+
+
+
+
+
+
+
 .highlight {
     text-align: center; /* Center the highlight text */
     font-size: 1.2rem; /* Highlight font size */
