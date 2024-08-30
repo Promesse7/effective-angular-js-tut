@@ -710,3 +710,26 @@ h5 {
         font-size: 2.5rem; /* Adjust icon size for smaller screens */
     }
 }
+
+
+/*-----fees-----*/
+
+ .fee-card {
+            transition: transform 0.3s ease-in-out;
+        }
+        .fee-card:hover {
+            transform: translateY(-5px);
+        }
+        .fee-amount {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        .provision-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .provision-list li::before {
+            content: '✓';
+            color: #28a745;
+            margin-right: 0.5rem;
+        }
