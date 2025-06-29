@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://bambe.netlify.app/sitemap.xml
-
+Sitemap: https://bambe.netlify.app/sitemap-index.xml
